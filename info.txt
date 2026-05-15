@@ -68,3 +68,6 @@
       git push
 
 7. github code action tab in see = release make them
+
+
+git pull origin main --allow-unrelated-histories
