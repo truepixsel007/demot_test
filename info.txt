@@ -1,0 +1,64 @@
+### ci and cd
+
+1. local code -> github on
+    git init
+    git add .
+    git commit -m "Initial commit"
+    git branch -M main
+    git remote add origin https://github.com/truepixsel007/demot_test.git
+    git push -u origin main
+
+2. code in github workflow create them
+   github folder create -> workflows (folder create) -> main.yaml
+   file in indention is important
+   android and ios build create them
+   process trigger
+
+3. github in Actions
+   devOps in use automate your process using third party services.
+
+4. Every workflow consists of several difference core concepts.
+   1. Events: Events are defined trigger that kick off a workflow. they
+      can be configured to look for one or more trigger and qualified as
+      needed by developer. They can also be set to run on specific
+      coding braches within a given repository on Github.
+      * Events are triggers that start a workflow.
+        Example: push code, create pull request, release app.
+
+   2. Jobs: Jobs are a set of steps that execute on the same runner. Each
+      runs in its own VM and parallel to other jobs, unless otherwise
+      specified.
+      * Jobs are groups of steps that run on a runner (virtual machine).
+        Multiple jobs can run in parallel.
+   3. Steps: Steps are individual tasks that run commands in a job. These
+      can be an action or a shell command. All steps in a job execute on
+      the same runner.
+      * Steps are individual tasks inside a job.
+        Example: install Flutter, run tests, build app.
+
+   4. Actions: An action is a command that’s executed on a runner—and
+      the core element of GitHub Actions, which is named after it
+      * Actions are reusable commands or tasks used in workflows.
+        Example: checkout code, setup Flutter.
+
+   5. Runners: A runner is a GitHub Actions server. It listens for available
+      jobs, runs each in parallel, and reports back progress, logs and
+      results. Each runner can be hosted by GitHub or self-hosted on a
+      localized server. GitHub Hosted runners are based on Ubuntu Linux,
+      Windows, and macOS
+     * Runners are servers that execute jobs.
+       They can be GitHub-hosted or self-hosted.
+       Supported systems: Linux, Windows, macOS.
+
+5. secrets.TOKEN
+   -your github project code , setting -> Actions secrets and variables -> Actions -> Actions secrets and variables ->  new repositry secret
+   - main.yaml file name same on github action screts
+   - how to token generate them
+   - github profile on click  -> settings -> Developer settings -> personal acces token-> token classic -> generate new tokens(classic)
+   - token name enter ,  Expiration select, repo select, button click gernate token
+   - copy a token
+   - new repositry secret = your secret name , secret token paste there
+   - Add secret button on click
+
+6. now local code commit them (true sign on click)
+   - create release build , commit and push button on click
