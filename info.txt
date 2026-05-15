@@ -62,3 +62,5 @@
 
 6. now local code commit them (true sign on click)
    - create release build , commit and push button on click, push button click
+
+7. github code action tab in see = release make them
